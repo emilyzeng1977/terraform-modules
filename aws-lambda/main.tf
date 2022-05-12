@@ -22,7 +22,7 @@ module "lambda" {
 
   source_path = [
     {
-      path = "${path.module}/../..",
+      path = format("${path.module}/%s", local.makefile_path),
       commands = [
         local.cmd_build,
         local.cmd_cp_otel,
