@@ -152,7 +152,7 @@ variable "schedules" {
 }
 
 locals {
-  makefile_path = format("../../../..%s", var.makefile_path)
+  makefile_path = format("../../../../../../..%s", var.makefile_path)
   # Bucket_name used to save lambda zip file
   bucket_name     = format("lambdas-%s.identitii.com", var.account_id)
   # Lambda
